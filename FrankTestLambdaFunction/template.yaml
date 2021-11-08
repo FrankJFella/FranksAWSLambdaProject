@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+Description: FranksTestLambdaFunction
+
+Resources:
+
+  FranksTestLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Runtime: java11
+      MemorySize: 512
+      Handler: frankslambdaapp.LambdaHandler::handleRequest
+      CodeUri: target/LambdaHelloWorld-1.0-SNAPSHOT.zip
